@@ -1,0 +1,7 @@
+ipynb_checkpoints/
+aerial_map/
+results/
+scenes/
+semantic_map
+
+*.pth
