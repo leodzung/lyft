@@ -10,7 +10,9 @@ Lyft’s mission is to improve people’s lives with the world’s best transpor
 
 Update 11/28/2020
 - [Using wget widget to download data from Kaggle to Google Colab](https://www.kaggle.com/kool777/ultimate-google-colab-training-batch-size-64)
+
 Note: Chrome had a widget that is very handy to get the wget command, but had been removed due to potential mallicious code. I since used [cliget](https://github.com/zaidka/cliget) on Firefox.
+
 Note: wget is much faster than curl for downloading.
 
 - [Training using TPU](https://www.kaggle.com/doanquanvietnamca/tpu-resnet50-faster-better)
