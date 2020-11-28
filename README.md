@@ -16,14 +16,18 @@ Note: Chrome had a widget that is very handy to get the wget command, but had be
 Note: wget is much faster than curl for downloading.
 
 - [Training using TPU](https://www.kaggle.com/doanquanvietnamca/tpu-resnet50-faster-better)
+
 For this particular competition, TPU is not very useful because the bottle neck is the GPU, which is heavily utillized in the rasterization process. Also, there is a known bug in TPU that only allows training on single core. With this limitation, Colab GPU's performance is slightly better than the TPU counterpart.
 
 - [Train on complete training dataset](https://www.kaggle.com/philculliton/lyft-full-training-set)
+
 Google Colab has a limit on Cloud storage that didn't allow me to store the complete training dataset for training.
 A workaround is to rasterize the training dataset locally with small size to reduce the size of the whole set. However, my local computer doesn't have sufficient RAM to support this (it hangs whenever reaching 50 - 60% completion).
 
 - Different backbone architectures. 
-For this particular competition, ResNet performs better than EfficientNet. ResNet18 produces more consistent validation and test score than ResNet34 and ResNet50. My final submission using ResNet18 as the backbone.
+
+ResNet performs better than EfficientNet. ResNet18 produces more consistent validation and test score than ResNet34 and ResNet50. My final submission using ResNet18 as the backbone.
 
 - Learning rate scheduler
+
 CosineAnnealingWarmRestarts perform better than OneCycleLR. The reason is that with ConsineAnnealing scheduler, the learning rate drops faster and model converges faster, while with OneCycleLR, the learning rate in the beginning increases to a point that the loss starts to increase.
